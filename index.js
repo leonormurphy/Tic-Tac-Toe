@@ -104,7 +104,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     
     const newGame = () => {
-        
+        document.getElementById("again").style.display = "none";
+        document.getElementById("reset").style.display = "block";
         board = ['','','','','','','','',''];
         isGameActive = true;
         announcer.classList.add('hide');
