@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const tiles = Array.from(document.querySelectorAll('.tile'));
     const playerDisplay = document.querySelector('.display-player');
     const resetButton = document.querySelector('#reset');
+    const playAgain = document.querySelector('#again');
     const announcer = document.querySelector('.announcer');
 
     //Variables for the game
@@ -57,10 +58,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const announce = (type) => {
         switch(type){
             case PLAYERO_WON:
-                announcer.innerHTML = 'Player <span class ="playerO">O</span> Won';
+                //document.getElementById("container").style.display = "none"; //hide the grid
+                announcer.innerHTML = 'Player <span class ="playerO">O</span> Won!';
+                document.getElementById("again").style.display = "block";
                 break;
             case PLAYERX_WON:
-                announcer.innerHTML = 'Player <span class ="playerX">X</span> Won';
+                //document.getElementById("container").style.display = "none"; //hide the grid
+                announcer.innerHTML = 'Player <span class ="playerX">X</span> Won!';
+                document.getElementById("again").style.display = "block";
                 break;
             case TIE:
                 announcer.innerText = 'Tie';
@@ -96,6 +101,22 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    const newGame = () => {
+        
+        board = ['','','','','','','','',''];
+        isGameActive = true;
+        announcer.classList.add('hide');
+        
+        if(currentPlayer === 'O'){
+            changePlayer();
+        }
+
+        tiles.forEach(tile => {
+            tile.innerText = '';
+            tile.classList.remove('playerX');
+            tile.classList.remove('playerO');
+        });
+    }
     const resetBoard = () => {
         board = ['','','','','','','','',''];
         isGameActive = true;
@@ -117,5 +138,7 @@ window.addEventListener('DOMContentLoaded', () => {
         tile.addEventListener('click', () => userAction(tile,index));
     });
 
+    document.getElementById("again").style.display = "none";
+    playAgain.addEventListener('click',newGame);
     resetButton.addEventListener('click',resetBoard);
 });
