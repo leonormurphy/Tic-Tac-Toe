@@ -1,0 +1,78 @@
+/* Credits: https://github.com/javascriptacademy-stash/tic-tac-toe */
+/* Remove browser defined paddings and margins and set the font for the entire page */
+* {
+    padding: 0;
+    margin 0;
+    font-family: 'Itim', cursive;
+}
+
+.background {
+    background-color: #053F5C;
+    height: 100vh;
+    padding-top: 1px;
+}
+
+.title { 
+    color: #9FE7F5;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+}
+
+.display {
+    color: #9FE7F5;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+}
+
+.tile {
+    border: 1px solid #9FE7F5;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.playerX {
+    color: #F27F0C;
+}
+
+.playerO {
+    color: #ffab03;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;    
+}
+
+#reset {
+    background-color: #429EBD;
+    color: #9FE7F5;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
