@@ -60,11 +60,13 @@ window.addEventListener('DOMContentLoaded', () => {
             case PLAYERO_WON:
                 //document.getElementById("container").style.display = "none"; //hide the grid
                 announcer.innerHTML = 'Player <span class ="playerO">O</span> Won!';
+                document.getElementById("reset").style.display = "none";
                 document.getElementById("again").style.display = "block";
                 break;
             case PLAYERX_WON:
                 //document.getElementById("container").style.display = "none"; //hide the grid
                 announcer.innerHTML = 'Player <span class ="playerX">X</span> Won!';
+                document.getElementById("reset").style.display = "none";
                 document.getElementById("again").style.display = "block";
                 break;
             case TIE:
