@@ -1,4 +1,4 @@
-<!-- Credits: https://github.com/javascriptacademy-stash/tic-tac-toe -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,32 +11,56 @@
       rel="stylesheet"
     />
     <script src="./index.js"></script>
-    <title>Tic-Tac-Toe</title>
+    <title>Prueba</title>
   </head>
   <body>
-    <main class="background">
-      <section class="title">
-        <h1>Tic Tac Toe</h1>
-      </section>
-      <section class="display">
-        Player <span class="display-player playerX">X</span>'s turn
-      </section>
-      <section class="container" id="container">
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-      </section>
-      <section class="display announcer hide"></section>
-      <section class="controls">
-        <button id="reset">Reset</button>
-        <button id="again">Play again</button>
-      </section>
+    <main>
+      <div class="background">
+        <div class="row">
+          <div class="column">
+            <div class="column1">
+              <h1>Tic tac toe</h1>
+              <section class="display">
+                Player <span class="display-player playerX">X</span>'s turn
+              </section>
+              <section class="container" id="container">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+              </section>
+              <section class="display announcer hide"></section>
+              <section class="controls">
+                <button id="reset">Reset</button>
+                <button id="again">Play again</button>
+              </section>
+            </div>
+          </div>
+          <div class="column">
+            <div class="column2">
+              <h1>Score</h1>
+              <div class="row2">
+                <div class="column11">
+                  <div class="column111">
+                    <h2>Player X</h2>
+                    <p id="points1"></p>
+                  </div>
+                </div>
+                <div class="column11">
+                  <div class="column112">
+                    <h2>Player O</h2>
+                    <p id="points2"></p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
